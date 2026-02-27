@@ -16,6 +16,10 @@ const Navbar = () => {
         <p className='text-lg font-bold text-white'>Zuno</p>
         </Link>
 
+        <div  className='flex-between gap-5'>
+            mobile menu
+        </div>
+
     </nav>
   )
 }
