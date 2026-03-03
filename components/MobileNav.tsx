@@ -1,38 +1,30 @@
-import React from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+'use client';
 
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import { sidebarLinks } from '@/constants';
 
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { sidebarLinks } from '@/constants';
+import { cn } from '@/lib/utils';
 
 const MobileNav = () => {
-    const pathname=usePathname();
+  const pathname = usePathname();
+
   return (
-    <section className='w-full max-w-[264px]'>
-    
-    <Sheet>
-      <SheetTrigger asChild>
-       <Image
-                alt="Menu Icon"
-                src="/icons/hamburger.svg"
-                width={24}
-                height={24}
-                className='items-white'
-                 /> 
-     
-      </SheetTrigger>
-      <SheetContent>
-         <Link href="/" className="flex items-center gap-1">
+    <section className="w-full max-w-[264px]">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Image
+            src="/icons/hamburger.svg"
+            width={36}
+            height={36}
+            alt="hamburger icon"
+            className="cursor-pointer sm:hidden"
+          />
+        </SheetTrigger>
+        <SheetContent side="left" className="border-none bg-dark-1">
+          <Link href="/" className="flex items-center gap-1">
             <Image
               src="/icons/logo.svg"
               width={32}
@@ -73,11 +65,10 @@ const MobileNav = () => {
               </section>
             </SheetClose>
           </div>
-      </SheetContent>
-    </Sheet>
-   
+        </SheetContent>
+      </Sheet>
     </section>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;
