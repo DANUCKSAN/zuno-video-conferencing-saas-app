@@ -7,7 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Zuno",
-  description: "A Zoom clone built with Next.js, Tailwind CSS, and WebRTC.",
+  description: "A video conferencing app",
+  icons: {
+    icon: '/icons/logo2.svg',
+  },    
+
 };
 
 export default function RootLayout({
@@ -18,7 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider
+
       appearance={{
+        layout: {
+          
+          socialButtonsVariant:'iconButton',
+          logoImageUrl:'/icons/logo2.svg',
+        },
         variables:{
           colorText:'#fff',
           colorPrimary:'#0E78F9',
