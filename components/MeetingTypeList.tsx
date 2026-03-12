@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import HomeCard from './HomeCard';
+import MeetingModal from './MeetingModal';
 
 interface HomeCardProps {
   className?: string;
@@ -45,6 +46,8 @@ const MeetingTypeList = ({ className, img, title, description, handleClick }: Ho
         className="bg-yellow-1"
         handleClick={() => router.push('/recordings')}
       />
+
+      <MeetingModal/>
     </section>
   );
 };
