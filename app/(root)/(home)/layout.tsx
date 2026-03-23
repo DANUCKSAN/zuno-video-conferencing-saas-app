@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 import { Metadata } from 'next';
@@ -24,6 +25,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
               
             </section>
         </div>
+        <Footer/>
     
     </main>
   )
